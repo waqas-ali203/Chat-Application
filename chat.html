@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Hnad Chat Application UI</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .chat-container {
+            background-color: #ffffff;
+            border-radius: 15px;
+            width: 400px;
+            max-width: 90%;
+            display: flex;
+            flex-direction: column;
+            height: 80vh;
+        }
+
+        .chat-header {
+            background-color: #6a11cb;
+            color: white;
+            padding: 20px 20px;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 20px;
+            background-color: #ffffff;
+           border-bottom: 2px solid rgb(199, 191, 191);
+        }
+        .main-message{
+            background-color: #2575fc;
+            padding: 10px 10px;
+            border-radius: 15px;
+            color: white;
+        }
+        .chat-footer {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #ffffff;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+        .chat-footer .text-input {
+            flex: 1;
+            border: 2px solid #6a11cb;
+            border-radius: 20px;
+            padding: 10px 15px;
+            margin-right: 10px;
+            font-size: 1rem;
+        }
+        /* .chat-footer .chooseFile {
+           
+            font-size: smaller;
+        } */
+
+        .chat-footer button {
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .chat-footer button:hover {
+            background: linear-gradient(to right, #2575fc, #6a11cb);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            Chat Application By Waqas
+        </div>
+        <div class="chat-messages" id="message-container">
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="message" class="text-input" placeholder="Type a message...">
+            <!-- <input type="file" name="file-choosen" id="select-file" class="chooseFile"> -->
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+    <script src="chat.js"></script>
+</body>
+
+</html>
